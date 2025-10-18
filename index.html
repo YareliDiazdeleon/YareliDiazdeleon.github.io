@@ -54,16 +54,21 @@
       gap: 10px;
       font-weight: 600;
     }
+
+    /* brand mark (SVG logo) */
     .brand__mark {
       width: 28px;
       height: 28px;
-      border-radius: 6px;
-      background: var(--cw-black);
-      color: white;
-      display: grid;
-      place-items: center;
-      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
+    .brand__mark svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
     .brand__name {
       font-size: 18px;
       letter-spacing: 0.2px;
@@ -160,56 +165,46 @@
 
     /* ===== RESPONSIVE ===== */
     @media (max-width: 960px) {
-      .hero {
-        grid-template-columns: 1fr;
-      }
-      .hero__image {
-        order: -1;
-        min-height: 300px;
-      }
-      .nav__links {
-        gap: 18px;
-      }
+      .hero { grid-template-columns: 1fr; }
+      .hero__image { order: -1; min-height: 300px; }
+      .nav__links { gap: 18px; }
     }
-
     @media (max-width: 700px) {
-      .nav__inner {
-        flex-wrap: wrap;
-      }
-      .nav__links {
-        width: 100%;
-        justify-content: center;
-        padding-top: 8px;
-      }
-      .hero {
-        padding: 24px var(--pad);
-      }
+      .nav__inner { flex-wrap: wrap; }
+      .nav__links { width: 100%; justify-content: center; padding-top: 8px; }
+      .hero { padding: 24px var(--pad); }
     }
-
     @media (max-width: 520px) {
-      .nav__links { display: none; } /* hide full nav */
-      .hero {
-        padding: 24px var(--pad);
-      }
-      .hero__panel {
-        text-align: center;
-      }
-      .cta {
-        width: 100%;
-        text-align: center;
-      }
+      .nav__links { display: none; }
+      .hero { padding: 24px var(--pad); }
+      .hero__panel { text-align: center; }
+      .cta { width: 100%; text-align: center; }
     }
   </style>
 </head>
 <body>
 
-  <!-- NAV -->
+  <!-- ===== NAVBAR ===== -->
   <header class="nav">
     <div class="nav__inner">
       <a class="brand" href="#">
-        <div class="brand__mark">j</div>
+        <div class="brand__mark">
+          <!-- charity: water SVG logo -->
+          <svg viewBox="0 0 200 230" xmlns="http://www.w3.org/2000/svg" aria-label="charity water brand mark">
+            <mask id="drop">
+              <rect width="200" height="230" fill="#fff"/>
+              <path fill="#000" d="M100,70C90,52,80,37,80,28C80,13,92,4,100,4s20,9,20,24c0,9-10,24-20,42ZM100,70c26,18,26,52,0,70-26-18-26-52,0-70Z"/>
+            </mask>
+            <g mask="url(#drop)">
+              <rect x="22" y="34" width="156" height="180" rx="18" fill="#FFD300"/>
+              <rect x="54" y="18" width="52" height="28" rx="8" fill="#FFD300"/>
+              <path d="M136 14h28a10 10 0 0 1 10 10v22h-38z" fill="#FFD300"/>
+            </g>
+          </svg>
+        </div>
         <div class="brand__name">charity: water</div>
       </a>
+
       <nav class="nav__links">
         <a href="#">Home</a>
         <a href="#">Our Work</a>
@@ -219,7 +214,7 @@
     </div>
   </header>
 
-  <!-- HERO -->
+  <!-- ===== HERO SECTION ===== -->
   <main class="hero">
     <section class="hero__panel">
       <div class="eyebrow">Clean water changes everything</div>
@@ -232,13 +227,12 @@
     </section>
 
     <aside class="hero__image">
-      <!-- Replace this image with your own -->
       <img src="https://images.ctfassets.net/2w85ks0ylymt/210m5hfBucZhE4pAOwD6Z4/a33402dcca40c3d892278b80ba1795b1/SierraLeone_2023_CG-7551.jpg?w=1200" 
            alt="Smiling child collecting clean water from a pump" />
     </aside>
   </main>
 
-  <!-- FOOTER -->
+  <!-- ===== FOOTER ===== -->
   <footer>
     © charity: water — student project for educational purposes.
   </footer>
