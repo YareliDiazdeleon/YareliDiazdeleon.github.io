@@ -640,4 +640,362 @@
       }
 
       nav {
-        w
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-mockup {
+        order: -1;
+      }
+
+      .floating-card {
+        position: absolute;
+        top: -0.4rem;
+        right: 0.8rem;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .page {
+        padding-inline: 1.1rem;
+      }
+
+      nav {
+        font-size: 0.8rem;
+        gap: 1rem;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .goal-row {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 1.9rem;
+      }
+    }
+
+    @media (max-width: 520px) {
+      nav {
+        flex-wrap: wrap;
+      }
+      .hero-ctas {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn-primary,
+      .btn-secondary {
+        justify-content: center;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="logo">
+        <div class="logo-icon">🦉</div>
+        <span>Duolingo</span>
+      </div>
+      <nav>
+        <a href="#features">Features</a>
+        <a href="#goals">Daily goals</a>
+        <a href="#experience">Experience</a>
+        <button class="nav-cta">Sign in</button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero">
+        <div>
+          <div class="hero-label">
+            <span class="hero-label-dot"></span>
+            New: Smarter daily goals
+          </div>
+          <h1>
+            Turn 5 minutes a day<br />
+            into <span class="hero-highlight">real language skills.</span>
+          </h1>
+          <p>
+            Start a lesson that fits into your day, not the other way around.
+            Track your streak, unlock rewards, and get instant feedback on every
+            exercise.
+          </p>
+
+          <div class="hero-streak">
+            🔥 <span>23-day streak</span> • Keep it alive with today’s lesson
+          </div>
+
+          <div class="hero-ctas">
+            <button class="btn-primary">
+              Start your daily lesson
+              <span>→</span>
+            </button>
+            <button class="btn-secondary">
+              Take a quick placement test
+              <span>⏱</span>
+            </button>
+          </div>
+
+          <div class="hero-meta">
+            <span>Free forever</span>
+            <span>No credit card required</span>
+            <span>Designed for busy learners</span>
+          </div>
+        </div>
+
+        <!-- Phone mockup -->
+        <div class="hero-mockup" aria-hidden="true">
+          <div class="phone">
+            <div class="phone-notch"></div>
+
+            <div class="lesson-header">
+              <div>
+                <strong>Spanish • Daily lesson</strong><br />
+                <span>Unit 3 · Travel phrases</span>
+              </div>
+              <div class="lesson-progress">
+                <div class="lesson-progress-bar"></div>
+              </div>
+            </div>
+
+            <div class="lesson-card">
+              <div class="lesson-icon">🗣</div>
+              <div class="lesson-text">
+                <small>Translate this sentence</small>
+                <strong>“I need a ticket, please.”</strong>
+              </div>
+            </div>
+
+            <div class="answer-options">
+              <div class="answer">Yo necesito un boleto, gracias.</div>
+              <div class="answer correct">Necesito un boleto, por favor.</div>
+              <div class="answer">Yo quiero un boleto, por favor.</div>
+              <div class="answer">Soy boleto, gracias.</div>
+            </div>
+
+            <div class="lesson-footer">
+              <div class="streak-pill">
+                🔥 23
+              </div>
+              <button class="continue-btn">
+                Continue
+                <span>→</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="floating-card">
+            <span>✅</span>
+            <div>
+              <strong>Nice work!</strong><br />
+              You’re on track for your “Casual” goal today.
+            </div>
+          </div>
+
+          <div class="floating-tag">
+            ⭐ 92% correct this week
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURES -->
+      <section id="features" class="section">
+        <div class="section-header">
+          <div>
+            <div class="section-title">Designed around real habits</div>
+            <p class="section-sub">
+              The new experience makes it easier to stay on track every day,
+              with clearer progress and feedback built into every screen.
+            </p>
+          </div>
+          <a href="#experience" class="pill-link">
+            <span>👀</span> See what’s new
+          </a>
+        </div>
+
+        <div class="features-grid">
+          <article class="feature-card">
+            <div class="feature-icon">⏱</div>
+            <h3>Micro-lessons that fit your day</h3>
+            <p>
+              Complete a lesson in the time it takes to wait for coffee. Each
+              one is focused, interactive, and bite-sized.
+            </p>
+            <div class="feature-meta">Avg. lesson time: <strong>5 min</strong></div>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">🧠</div>
+            <h3>Personalized practice</h3>
+            <p>
+              Smart review brings back words right when you’re about to forget
+              them, so you remember more with less effort.
+            </p>
+            <div class="feature-meta">
+              Powered by spaced repetition and instant feedback.
+            </div>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">🔥</div>
+            <h3>Motivation that actually sticks</h3>
+            <p>
+              Streaks, XP, and weekly goals keep you accountable.
+              Friendly reminders nudge you at the perfect moment.
+            </p>
+            <div class="feature-meta">
+              Join millions keeping a daily streak alive.
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- GOALS -->
+      <section id="goals" class="section">
+        <div class="goal-row">
+          <div>
+            <h2>Set a daily goal that works for you</h2>
+            <p>
+              Choose how much time you want to spend learning each day. We’ll
+              tailor reminders and lesson lengths so you can actually stick with
+              it.
+            </p>
+            <div class="goal-chips">
+              <button class="chip active">
+                🌱 <strong>Casual</strong>
+                <span>5 min/day</span>
+              </button>
+              <button class="chip">
+                💪 <strong>Regular</strong>
+                <span>10 min/day</span>
+              </button>
+              <button class="chip">
+                🚀 <strong>Serious</strong>
+                <span>15 min/day</span>
+              </button>
+              <button class="chip">
+                🎯 <strong>Intense</strong>
+                <span>20+ min/day</span>
+              </button>
+            </div>
+            <p class="goal-cta">
+              Not sure where to start? We’ll recommend a goal based on your
+              first lesson.
+            </p>
+            <button class="btn-primary" style="margin-top:0.6rem;">
+              Choose your goal
+              <span>🎯</span>
+            </button>
+          </div>
+
+          <div class="goal-stats">
+            <div class="goal-stats-row">
+              <div>
+                <div class="goal-stat-label">Learners on a daily streak</div>
+                <div class="goal-stat-value">+78%</div>
+              </div>
+              <div>
+                <div class="goal-stat-label">Avg. lessons per week</div>
+                <div class="goal-stat-value">9.2</div>
+              </div>
+            </div>
+            <p>
+              The redesigned app surfaces your streak, goal, and next best
+              lesson at the top of the home screen—so there’s never any doubt
+              about what to do next.
+            </p>
+            <div class="progress-pill">
+              <span>📈</span> Learners with a goal complete <strong>2×</strong> more lessons.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE / CTA -->
+      <section id="experience" class="section">
+        <div class="section-header">
+          <div>
+            <div class="section-title">Ready to make language a habit?</div>
+            <p class="section-sub">
+              Start your first lesson in under 30 seconds. Pick a language, set
+              a goal, and we’ll guide you through everything else.
+            </p>
+          </div>
+        </div>
+
+        <div class="goal-row" style="background:#102a43; color:#f5fff7; border:none;">
+          <div>
+            <h2 style="color:#ffffff;">Start learning free today</h2>
+            <p style="color:#d4e1f5;">
+              No ads, no trial to cancel. Just your next favorite daily habit.
+              Switch between mobile and desktop anytime—your progress comes
+              with you.
+            </p>
+            <div class="hero-ctas">
+              <button class="btn-primary">
+                Get started free
+                <span>✨</span>
+              </button>
+              <button class="btn-secondary" style="background:rgba(255,255,255,0.06); color:#f5fff7;">
+                Explore all languages
+                <span>🌍</span>
+              </button>
+            </div>
+            <div class="hero-meta" style="color:#9fb4d8; margin-top:0.4rem;">
+              <span>No commitment</span>
+              <span>Fun, game-like lessons</span>
+              <span>For beginners to advanced</span>
+            </div>
+          </div>
+          <div class="goal-stats" style="background:#182b4f; border-color:rgba(255,255,255,0.09); color:#d4e1f5;">
+            <div class="goal-stats-row">
+              <div>
+                <div class="goal-stat-label" style="color:#9fb4d8;">Average rating</div>
+                <div class="goal-stat-value" style="color:#ffdc4c;">★ 4.8</div>
+              </div>
+              <div>
+                <div class="goal-stat-label" style="color:#9fb4d8;">App reviews</div>
+                <div class="goal-stat-value" style="color:#f5fff7;">millions</div>
+              </div>
+            </div>
+            <p style="font-size:0.78rem;">
+              “I finally found a way to practice Spanish that fits into my real
+              life. The new daily goals and streak reminders keep me coming
+              back.” — real learner story
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>© Duolingo – Learn languages for free.</div>
+      <div class="store-badges">
+        <div class="store-badge">
+          <small>Download on the</small>
+          <strong>App Store</strong>
+        </div>
+        <div class="store-badge">
+          <small>Get it on</small>
+          <strong>Google Play</strong>
+        </div>
+        <div class="store-badge">
+          <small>Continue on</small>
+          <strong>Web browser</strong>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
