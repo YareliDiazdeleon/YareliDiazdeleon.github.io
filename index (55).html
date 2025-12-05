@@ -3,85 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>Modern Clean Website</title>
 
     <style>
-        body {
+        * {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f5f7fa;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Helvetica", Arial, sans-serif;
+        }
+
+        body {
+            background: #e9eef4;
+            color: #333;
         }
 
         header {
-            background: #2a74ff;
-            color: white;
-            padding: 20px;
+            background: white;
+            padding: 25px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
             text-align: center;
-            font-size: 24px;
-        }
-
-        nav {
-            background: #ffffff;
-            padding: 10px;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            border-bottom: 1px solid #ddd;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #2a74ff;
+            font-size: 26px;
             font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .container {
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: auto;
         }
 
         .hero {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
             text-align: center;
-            padding: 60px 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
         }
 
         .hero h1 {
-            font-size: 40px;
+            font-size: 38px;
             margin-bottom: 10px;
         }
 
         .hero p {
             font-size: 18px;
-            color: #555;
             margin-bottom: 25px;
+            color: #666;
         }
 
         .btn {
-            padding: 12px 22px;
-            background: #2a74ff;
+            padding: 12px 25px;
+            background: #4B72FF;
             color: white;
-            border-radius: 6px;
             text-decoration: none;
+            border-radius: 25px;
             font-size: 16px;
+            transition: 0.3s;
         }
 
         .btn:hover {
-            background: #1d55c8;
+            background: #244ed8;
+        }
+
+        .cards {
+            margin-top: 40px;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 16px;
+            width: 260px;
+            text-align: center;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.07);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            font-size: 20px;
         }
 
         footer {
             text-align: center;
-            padding: 20px;
             margin-top: 50px;
-            background: #f0f0f0;
-            font-size: 14px;
-            color: #777;
+            padding: 20px;
+            color: #888;
         }
     </style>
 </head>
 
 <body>
 
-    <header>
-        Welcome to My Website
-    </header>
+<header>
+    My Modern Website
+</header>
 
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Projects</a>
-        <a href="#">About</a>
+<div class="container">
+
+    <div class="hero">
+        <h1>Welcome to Your Space</h1>
+        <p>A clean, simple, modern layout designed to showcase ideas beautifully.</p>
+        <a href="#" class="btn">Explore More</a>
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Fast & Simple</h3>
+            <p>Built with clean code and a minimal style for easy customization.</p>
+        </div>
+
+        <div class="card">
+            <h3>Beautiful Design</h3>
+            <p>A soft, modern look that works for portfolios, projects, or landing pages.</p>
+        </div>
+
+        <div class="card">
+            <h3>Responsive</h3>
+            <p>Designed to look great on desktop, tablet, or phone.</p>
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    © 2025 Modern Website — All Rights Reserved
+</footer>
+
+</body>
+</html>
